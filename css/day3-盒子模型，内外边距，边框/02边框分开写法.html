@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			width:200px;
+			height: 400px;
+			border-top: 2px solid red;
+			border-left: 2px solid green;
+			border-right: 2px solid blue;
+			border-top: 2px solid pink;
+		}
+		input {
+			/*border-top: none;
+			border-left: none;
+			border-right: none;
+			border-bottom: 1px dashed red;*/
+			/*简写*/
+			border:none;
+			border-bottom: 1px dashed red;
+			/*注意：两行代码顺序不能换，因为层叠性的就近原则*/
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	用户名：<input type="text"> <br>
+	密码：<input type="text">
+</body>
+</html>	

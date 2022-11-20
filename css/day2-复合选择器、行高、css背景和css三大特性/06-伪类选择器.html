@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>链接伪类选择器</title>
+	<style>
+/*未访问过链接状态*/
+		a:link {
+			color: #333;
+			text-decoration:  none;
+		}
+/*已访问的链接，我们点击过*/
+		a:visited {
+			color: orange;
+		}
+/*鼠标经过链接的状态*/
+		a:hover {
+			color: blue;
+		}
+/*当我们点击鼠标，别松开的时候*/
+		a:active {
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<a href="http://www.xiaomi.com">小米手机</a>
+	<a href="http://www.damii.com">大米手机</a>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻列表综合案例</title>
+	<style>
+	/*这句话一定要写*/
+		* {
+			margin: 0;
+			padding: 0;
+		}
+	/*取消列表默认样式*/
+		li {
+			list-style: none;
+		}
+	/*设置大盒子长宽、边框、内外边距*/
+		.box {
+			width: 298px;/*328-30*/
+			height: 198px;/*228-30*/
+			border: 1px solid #ccc;
+			/*设置padding 盒子会撑大，盒子宽高要减*/
+			padding: 15px;
+			/*块级盒子水平居中*/
+			margin: 100px auto;
+			background: url(images/line.jpg);
+		}
+	/*设置 标题盒子 实线下边框，5px内边距让下边框不紧贴文字*/
+		.box h2 {
+			padding: 5px 0;
+			font-size: 18px;
+			/*底边框*/
+			border-bottom: 1px solid #ccc;
+			margin-bottom: 10px;
+		}
+	/*给列表每个li盒子设置高度、行高和下边框*/
+		.box ul li {
+			height: 30px;
+			line-height: 30px;
+			border-bottom: 1px dashed #ccc;
+			/*小图标作为背景插入，左5px，上下居中*/
+			background: url(images/arr.jpg) no-repeat;
+			background-position: 5px center;
+		}
+	/*链接样式 设置左外边距使里li内文字不会重叠图标*/
+		.box ul li a {
+			color: #333;
+			font-size: 12px;
+			text-decoration: none;
+			margin-left: 20px;
+		}
+	/*鼠标经过链接，有下划线*/
+		.box ul li a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<!-- 标题盒子 -->
+		<h2>最新文章/New Articles</h2>
+		<!-- 列表盒子 -->
+		<ul>
+			<li>
+				<a href="#">北京招聘网页设计、平面</a>
+			</li>
+			<li>
+				<a href="#">体验JavaScript的魅力</a>
+			</li>
+			<li>
+				<a href="#">jQuery时代来临</a>
+			</li>
+			<li>
+				<a href="#">网页设计师的梦想</a>
+			</li>
+			<li>
+				<a href="#">jQuery中的链式编程</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

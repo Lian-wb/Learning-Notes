@@ -1,0 +1,37 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+.search {
+	width: 238px;
+	height: 294px;
+	border: 1px solid #D9E0EE;
+	border-top: 3px solid #FF8400;
+	margin:100px;
+}
+.search h1 {
+	font:normal 16px 黑体;
+	border-bottom: 1px solid #D9E0EE;
+	padding: 8px;
+}
+.search img {
+	padding: 8px 0px 0px 8px;
+}
+.search ul {
+	padding-left: 8px;
+}
+.search ul li {
+	padding: 3px 10px;
+	background: url(images/square.png) no-repeat left center;
+}
+.search ul li a {
+	font-size: 12px;
+	color: #666;
+	text-decoration: none;
+}
+.search ul li a:hover {
+	text-decoration: underline; 
+	color: #ff8400;

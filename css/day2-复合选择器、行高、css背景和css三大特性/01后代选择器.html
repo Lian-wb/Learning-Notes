@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后代选择器</title>
+	<style>
+		div a {
+			color: pink;
+		}
+		.dog li {
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<div class="nav">
+	<a href="#">内部链接</a>
+	<a href="#">内部链接</a>
+	<a href="#">内部链接</a>
+	</div>
+	<a href="#">外部链接</a>
+	<a href="#">外部链接</a>
+	<a href="#">外部链接</a>
+<!-- ... -->
+	<ul>
+		<li>dog</li>
+		<li>dog</li>
+		<li>dog</li>
+	</ul>
+	<ul class="dog">
+		<li>2dog</li>
+		<li>2dog</li>
+		<li>2dog</li>
+	</ul>
+</body>
+</html>
