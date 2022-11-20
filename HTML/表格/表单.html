@@ -1,0 +1,86 @@
+<!-- 表单由表单控件、提示文本、表单域组成 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单</title>
+</head>
+<body>
+<!-- input控件 为单标签 -->
+	1.type属性 <br/>
+	<!-- type text 单行文本输入框 -->
+	<!-- type password 密码输入框 -->
+	<!-- type radio 单选按钮 -->
+	<!-- type checkbox 复选框 -->
+	<!-- type button 普通按钮 -->
+	<!-- type submit 提交按钮 -->
+	<!-- type reset 重置按钮 -->
+	<!-- type image 图像形式的提交按钮 -->
+	<!-- type file 文件域-->
+	2.value属性 <br/>
+	<!-- value 用户自定义 input控件中的默认文本值 -->
+	3.name属性 <br/>
+	<!-- name 用户自定义 控件的名称，便于后台查找 -->
+	4.size属性 <br/>
+	<!-- size 正整数 input控件在页面中的显示宽度 -->
+	5.checked属性 <br/>
+	<!-- checked checked 定义选择控件默认被选中的项 -->
+	6.maxlength属性 <br/>
+	<!-- maxlength 正整数 控件允许输入的最多字符数 -->
+		用户名：<input type="text" value="请输入用户名" />  <br/>
+		昵称：<input type="text" name="username"/> <br/>
+		密码：<input type="password" /> <br/>
+		性别：
+		      男 <input type="radio" name="sex"/>
+	          女 <input type="radio" name="sex"/> <br/>
+	    爱好：
+	          篮球 <input type="checkbox" name="hobby"/>
+	          爬山 <input type="checkbox" name="hobby"/>
+	          睡觉 <input type="checkbox" name="hobby"/> <br/>   
+	    是否同意条款：<input type="radio" checked="checked"/><br/>
+	    <!-- button需要value值，submit不需要但也可改 -->
+	    <input type="button" value="获取短信验证码"/>
+	    <input type="submit" />
+	    <input type="reset" value="重置所填"><br/>
+		<!-- 图片提交按钮 里面必须包含src属性 -->
+		<!-- ！！！image 别写成 images -->
+		<input type="image" src="images2/btn(1).png" /><br/>
+		<!-- 文件域 上传文件用的 -->
+		上传头像：<input type="file" /><br/>
+
+<!-- label标签  用于绑定一个表单元素，当点击label标签的时候，被绑定的表单元素就会获得输入焦点 -->
+	<br/><hr/><br/>
+	<h3>第一种用法：label直接包含表单</h3>
+		<label> 用户名：<input type="text" /> </label>
+	<h3>第二种用法：通过for和id控制 </h3>
+		<label for="nc">昵称：</label> 
+		<input type="text" id="nc" />
+
+<!-- textarea控件 双标签、可显示多行多文本输入，适用于留言板等-->
+	<br/><br/><br/>
+	用户留言：<textarea cols="每行中的字符数" rows="显示的行数">
+			 文本内容
+	         </textarea>
+	<br/><br/>
+
+<!-- select下拉列表控件 selected="selected"表示默认选中-->
+	<select>
+			<option>--请选择省份</option>
+			<option>北京</option>
+			<option>上海</option>
+			<option>上海</option>
+	</select>
+<br/><hr/><br/>
+<!-- form表单域 -->
+	<!-- action url地址 用于指定接收并处理表单数据的服务器程序的url地址 -->
+	<!-- method get/post 用于设置表单数据的提交方式 -->
+	<!-- name 用户自定义 表单的名字 -->
+	<form action="">
+		用户名：<input type="text" name="username" " />  <br/>
+		密码：<input type="password" name="pwd" /> <br/>
+		<input type="submit" />
+	    <input type="reset" /><br/>
+	</form>
+
+ </body>
+</html>
