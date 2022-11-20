@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			list-style: none;
+		}
+		.taobao {
+			/*子绝父相*/
+			position: relative;
+			width: 520px;
+			height: 280px;
+			background-color: pink;
+			margin: 100px auto;
+		}
+		.arrow-l,
+		.arrow-r{
+			/*只能用定位来做，才能压住盒子*/
+			/*不要占有位置 随便移动位置 必须用绝对定位*/
+			position: absolute;
+			/*定位盒子垂直居中公式*/
+			top: 50%;
+			margin-top: -15px;
+			/*绝对定位的盒子无需转换 直接给大小*/
+			width: 20px;
+			height: 30px;
+			background: rgba(0,0,0,.2);
+			/*&lt 的装饰，颜色和水平、垂直居中*/
+			text-decoration: none;
+			color: #fff;
+			text-align: center;
+			line-height: 30px;	
+		}
+		.arrow-l{
+			left: 0;
+			/*圆角矩形 右上角和右下角*/
+			border-top-right-radius: 15px;
+			border-bottom-right-radius: 15px;
+		}
+		.arrow-r {
+			right: 0;
+			text-align: right;
+			/*圆角矩形 左上角和左下角*/
+			border-top-left-radius: 15px;
+			border-bottom-left-radius: 15px;
+		}
+		.arrow-l:hover,
+		.arrow-r:hover {
+			background: rgba(0,0,0,.4);
+		}
+		.circle {
+			position: absolute;
+			left: 50%;
+			margin-left: -35px;
+			bottom: 15px;
+			width: 70px;
+			height: 13px;
+			background: rgba(255,255,255,0.3);
+			border-radius: 7px;
+		}
+		.circle li {
+			float: left;
+			width: 8px;
+			height: 8px;
+			background-color: #fff;
+			margin: 3px;
+			border-radius: 50%;
+		}
+		/*此处一定要注意优先级问题 上面优先级11，所以这里要全写优先级21*/
+		.circle .current {
+			background-color: #ff5000;
+		}
+	</style>
+</head>
+<body>
+	<div class="taobao">
+		<!-- 左按钮 -->
+		<a href="#" class="arrow-l"> &lt; </a>
+		<!-- 右按钮 -->
+		<a href="#" class="arrow-r"> &gt; </a>
+		<!-- 图片 -->
+		<img src="images/taobao.jpg" alt="">
+		<ul class="circle">
+			<li class="current"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+</html>

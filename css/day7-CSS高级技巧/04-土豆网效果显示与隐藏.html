@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+/*1.原来盒子里面有一个 黑色半透明盒子，刚开始看不见
+2.当我们鼠标经过的时候，这个黑色半透明的盒子就是显示出来*/
+	.box {
+		position: relative;
+		width: 222px;
+		height: 220px;
+		margin: 100px auto;
+	}
+	.mask {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 222px;
+		height: 220px;
+		background: rgba(0,0,0,0.3) url(images/arr.png) no-repeat center center;
+	}
+	.box a:hover .mask{
+		display: block;
+	}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<a href="#">
+			<div class="mask"></div>
+			<img src="images/3.jpg" alt="">
+		</a>
+	</div>
+</body>
+</html>
