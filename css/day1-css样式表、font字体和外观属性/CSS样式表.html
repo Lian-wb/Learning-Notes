@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	
+	</style>
+</head>
+<body>
+<!-- 行内式（内联样式） -->
+<!-- <标签名 style="属性1:属性值1; 属性2:属性值2" > 内容 </标签> -->
+<!-- style就是标签属性，属性与值用：隔开，多组属性用;隔开 -->
+	<h1 style="color: red; font-size: 18px;">世纪佳缘，我也在这里等你</h1>
+
+<!-- 内部样式表（内嵌样式表） -->
+<!-- 
+	<head>
+		<style type="text/css">
+			选择器（选择的标签）{
+				属性1:属性值1;
+				属性2:属性值2;
+			}
+		</style>
+	</head> 
+-->
+
+<!-- 外部样式表（外链式）-->
+<!-- 将所有样式放在一个或多个以.css为扩展名的外部样式表中 -->
+<!-- 
+<head>
+	<link rel="stylesheet" type="text/css" href="css文件路径">
+</head> 
+-->
+rel: 定义当前文档与被链接文档之间的关系，在这里需要指定为“stylesheet”表示被链接文档是一个样式表文件
+
+type：定义所链接文档类型，在这里需要指定为“text/CSS”，表示链接的外部文件为CSS样式表，我们可省略
+
+href: 定义所链接外部样式表的URL，可以是相对路径，也可以是绝对路径
+</body>
+</html>
