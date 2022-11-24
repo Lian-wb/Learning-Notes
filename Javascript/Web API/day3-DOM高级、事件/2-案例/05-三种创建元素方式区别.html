@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <p>abc</p>
+    <div class="inner"></div>
+    <div class="create"></div>
+    <script>
+        // window.onload = function() {
+        // document.write('<div>123</div>');
+
+        //     }
+        // 三种创建元素方式区别 
+        //1. document.write() 创建元素 如果页面文档流加载完毕， 再调用这句话会导致页面重绘
+        var btn = document.querySelector('button');
+        btn.onclick = function() {
+                document.write('<div>123</div>');
+            } //点击按钮会导致页面全部清除只显示 123（div里的内容）
+
+        // 2. innerHTML 创建元素
+        var inner = document.querySelector('.inner');
+        for (var i = 0; i <= 100; i++) {
+            inner.innerHTML += '<a href="#">百度</a>'
+        } //拼接字符串方式，一次循环给inner后面加一个a
+        var arr = [];
+        for (var i = 0; i <= 100; i++) {
+            arr.push('<a href="#">百度</a>');
+        }
+        inner.innerHTML = arr.join(''); //拼接数组方式，一次循环加一个数组元素，最后拼接到字符串
+        // 3. document.createElement() 创建元素
+        var create = document.querySelector('.create');
+        for (var i = 0; i <= 100; i++) {
+            var a = document.createElement('a');
+            create.appendChild(a);
+        } //一次循环，创建一块新空间存储a，然后追加到字符串（不占用原有字符串内存空间）
+    </script>
+</body>
+
+</html>
