@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = 'abaasdffggghhjjkkgfddsssss3444343';
+        //字符串长度
+        console.log(str.length);
+        //取出指定位置，第9位
+        console.log(str.charAt(9));
+        //查找指定字符是否在字符串中出现，i、a
+        console.log(str.indexOf('i'));
+        console.log(str.indexOf('a'));
+        //替换指定字符，g替换22，ss替换为b
+        console.log(str.replace('g', '22'));
+        console.log(str.replace('ss', 'b'));
+        //找出出现对多的字符和出现的次数
+        var str1 = {};
+        for (var i = 0; i <= str.length; i++) {
+            var chars = str.charAt(i);
+            if (str1[chars]) {
+                str1[chars]++;
+            } else {
+                str1[chars] = 1;
+            }
+        }
+        console.log(str1);
+        var max = 0;
+        var ch = '';
+        for (var k in str1) {
+            if (str1[k] > max) {
+                max = str1[k];
+                ch = k;
+            }
+        }
+        console.log(max);
+        console.log('最多的字符是' + ch);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
