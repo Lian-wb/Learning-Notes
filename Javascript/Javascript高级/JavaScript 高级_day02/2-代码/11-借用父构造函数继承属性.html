@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 借用父构造函数继承属性
+        // 1. 父构造函数
+        function Father(uname, age) {
+            // 原this 指向父构造函数的对象实例
+            this.uname = uname;
+            this.age = age;
+        }
+        // 2 .子构造函数 
+        function Son(uname, age, score) {
+            // 原this 指向子构造函数的对象实例
+            //调用父函数，把父函数的this修改为子函数的this，也就是父函数的this指向子函数的实例了，子函数实例就能继承应用父函数的属性和方法
+            Father.call(this, uname, age);
+            this.score = score;
+        }
+        var son = new Son('刘德华', 18, 100);
+        console.log(son);
+    </script>
+</body>
+
+</html>
