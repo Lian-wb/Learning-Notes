@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>剩余参数</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const sum = (...args) => { //args接收传来的所有剩余实参
+            let total = 0;
+            args.forEach(item => total += item); //forEach只有一个参数item，函数体内也只有一句指令
+            return total;
+        };
+        console.log(sum(10, 20)); //30
+        console.log(sum(10, 20, 30)); //60
+
+
+        let ary1 = ['张三', '李四', '王五'];
+        let [s1, ...s2] = ary1;
+        console.log(s1) //'张三'
+        console.log(s2) //'李四', '王五'
+    </script>
+</body>
+
+</html>
