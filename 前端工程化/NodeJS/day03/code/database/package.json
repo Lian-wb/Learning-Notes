@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "mongoose": "^6.4.4",
+    "querystringify": "^2.2.0"
+  }
+}
